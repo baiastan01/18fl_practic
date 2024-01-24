@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 23,
             ),
             Center(
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                 ),
                 width: 117,
                 height: 116,
-                child: Center(
+                child: const Center(
                   child: Text(
                     "M",
                     style: TextStyle(
@@ -39,10 +39,10 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 23,
             ),
-            Text(
+            const Text(
               "Let’s check your \n height and weight.",
               style: TextStyle(
                 fontSize: 24,
@@ -50,10 +50,10 @@ class HomePage extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MyCont(
@@ -75,10 +75,10 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Column(
+            const Column(
               children: [
                 NewWidjet(
                   images: "assets/images/pngs/u_calculator.png",
@@ -151,7 +151,7 @@ class NewWidjet extends StatelessWidget {
       width: 315,
       height: 48,
       decoration: BoxDecoration(
-        color: Color(0xffFFFFFF),
+        color: const Color(0xffFFFFFF),
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
@@ -176,16 +176,16 @@ class NewWidjet extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(15, 0, 20, 0),
               child: Text(
                 text,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Text(
               text2,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
               ),
@@ -226,7 +226,9 @@ class MyCont extends StatelessWidget {
             text1,
             style: TextStyle(
               fontSize: 14,
-              color: isSelected ? const Color(0xff000000) : Color(0xffFFFFFF),
+              color: isSelected
+                  ? const Color(0xff000000)
+                  : const Color(0xffFFFFFF),
             ),
           ),
         ),
